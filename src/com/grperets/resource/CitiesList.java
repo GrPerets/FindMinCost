@@ -3,12 +3,19 @@ package com.grperets.resource;
 import com.grperets.city.City;
 
 import java.io.*;
-import java.util.HashMap;
+import java.util.ArrayList;
 
-public class CitiesMap {
-    public static HashMap<String, City> citiesFromFile(String input){
+public class CitiesList {
+
+    /**
+     *
+     * @param input This is the path to the cities file
+     * @return This is the cities list
+     */
+
+    public static ArrayList<City> citiesFromFile(String input){
         File inputFile = new File(input);
-        HashMap<String, City> cities = new HashMap<>();
+        ArrayList<City> cities = new ArrayList<>();
         City city = null;
         String cityInfo = null;
         try (BufferedReader bRead = new BufferedReader(new FileReader(inputFile))){
@@ -20,7 +27,7 @@ public class CitiesMap {
                     city.put(Integer.valueOf(cityInfoArr[3+b]), Integer.valueOf(cityInfoArr[4+b]));
                     b = b+2;
                 }
-                cities.put(cityInfoArr[1], city);
+                cities.add(city);
             }
 
         }

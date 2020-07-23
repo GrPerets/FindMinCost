@@ -1,8 +1,7 @@
 package com.grperets.city;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 public class City {
     private int id;
@@ -59,11 +58,19 @@ public class City {
         return cost;
     }
 
-    public String findNameForId(int id, HashMap<String, City> cities){
-        Set<Map.Entry<String, City>> citySet = cities.entrySet();
-        for(Map.Entry<String, City> city : citySet){
-            if(city.getValue().getId() == id){
-                return city.getValue().getName();
+    public static City findCityById(int id, ArrayList<City> cities){
+        for(City city : cities){
+            if(city.getId() == id){
+                return city;
+            }
+        }
+        return null;
+    }
+
+    public static City findCityByName(String name, ArrayList<City> cities){
+        for(City city: cities){
+            if (city.getName().equals(name)) {
+                return city;
             }
         }
         return null;
