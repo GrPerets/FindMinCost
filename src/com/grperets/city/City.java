@@ -3,6 +3,10 @@ package com.grperets.city;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ *
+ */
+
 public class City {
     private int id;
     private String name;
@@ -58,6 +62,15 @@ public class City {
         return cost;
     }
 
+    /**
+     *
+     * This method finds and returns a city from the db (cities) by Id
+     *
+     * @param id
+     * @param cities
+     * @return
+     */
+
     public static City findCityById(int id, ArrayList<City> cities){
         for(City city : cities){
             if(city.getId() == id){
@@ -66,6 +79,15 @@ public class City {
         }
         return null;
     }
+
+    /**
+     *
+     * This method finds and returns a city from the db (cities) by Name
+     *
+     * @param name
+     * @param cities
+     * @return
+     */
 
     public static City findCityByName(String name, ArrayList<City> cities){
         for(City city: cities){

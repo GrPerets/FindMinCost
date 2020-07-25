@@ -3,6 +3,11 @@ package com.grperets.trip;
 import com.grperets.city.City;
 import java.util.ArrayList;
 
+/**
+ *
+ *
+ */
+
 public class Trip {
     private int totalCost;
     private ArrayList<City> visitedCities;

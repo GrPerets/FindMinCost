@@ -4,6 +4,12 @@ import com.grperets.city.City;
 import com.grperets.trip.Trip;
 import java.util.ArrayList;
 
+
+/**
+ *
+ *
+ */
+
 public class TravelAgency {
     private ArrayList<City> cities;
     private ArrayList<Trip> trips;
@@ -31,7 +37,7 @@ public class TravelAgency {
     }
 
     /**
-     *
+     *This method adds all possible routes (trips) to the bd (or TripsList)
      * @param start This is start-city
      * @param finish This is finish-city
      * @param trip This is one of the routes
@@ -71,6 +77,7 @@ public class TravelAgency {
     }
 
     /**
+     * This method
      * Choosing the cheapest trip
      */
 

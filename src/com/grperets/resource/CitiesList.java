@@ -8,6 +8,9 @@ import java.util.ArrayList;
 public class CitiesList {
 
     /**
+     *This method
+     *
+     * Returns a CitiesList from the source (file on disk)
      *
      * @param input This is the path to the cities file
      * @return This is the cities list
